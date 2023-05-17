@@ -4,5 +4,4 @@ With Floating Mascot your android smartphone can have a cute that will always wi
 
 ## Demonstration
 
-
-![floating mascot demo](https://github.com/raul-felipe/floating_mascot/assets/17601661/503b83dc-9a90-4bf1-ab54-8afa07fedf1c)
+![floating mascot demo](https://github.com/raul-felipe/floating_mascot/assets/17601661/db2e918d-3cfa-4092-8056-0d325edf9185)
