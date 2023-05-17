@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Floating Mascot</string>
+    <string-array name="rangeTemperaturesValues" >
+        <item>10</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="rangeLunchTimeValues" >
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="rangeSleepTimeValues" >
+        <item>23</item>
+        <item>30</item>
+    </string-array>
+</resources>

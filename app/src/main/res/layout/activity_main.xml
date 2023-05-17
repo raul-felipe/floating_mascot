@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/showButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        app:layout_constraintBottom_toTopOf="@+id/removeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/removeButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linear_temperature_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:layout_weight="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateButton"
+        app:layout_constraintVertical_bias="0.063">
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Temperature\nRange"></TextView>
+
+        <com.google.android.material.slider.RangeSlider
+            android:layout_weight="6"
+            android:id="@+id/temperature_slider"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:stepSize="1"
+            android:valueFrom="0"
+            android:valueTo="40"
+            app:values="@array/rangeTemperaturesValues" />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_weight="1"
+            android:id="@+id/min_temp_gif"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/hd_glaceon"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_weight="1"
+            android:id="@+id/max_temp_gif"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/hd_flareon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_sleep_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_temperature_layout"
+        app:layout_constraintVertical_bias="0.079">
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Lunch time\nRange"></TextView>
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/lunch_time_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:stepSize="1"
+            android:valueFrom="6"
+            android:valueTo="24"
+            app:values="@array/rangeLunchTimeValues"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_weight="2"
+            android:id="@+id/lunch_time_gif"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/hd_leafeon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_sleep_layout"
+        app:layout_constraintVertical_bias="0.079">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Sleep time\nRange"></TextView>
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/sleep_time_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:stepSize="1"
+            android:valueFrom="20"
+            android:valueTo="36"
+            app:values="@array/rangeSleepTimeValues" />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_weight="2"
+            android:id="@+id/night_time_gif"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/hd_espeon"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
