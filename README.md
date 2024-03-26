@@ -1,4 +1,4 @@
-# Floating Mascot (Cleaning Management App)
+# Floating Mascot
 
 With Floating Mascot your android smartphone can have a cute mascote that will always with be you. The mascot changes as your environment changes and everything is customized.
 
